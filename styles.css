@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    border-radius: 0 0 30px 30px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+header img {
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+}
+
+header button{
+    color: white;
+    background-color: #005ABE;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #14143C;
+    cursor: pointer;
+}

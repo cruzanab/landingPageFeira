@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -34,4 +35,14 @@ header button{
     border-radius: 10px;
     border: 2px solid #14143C;
     cursor: pointer;
+}
+
+.main{
+    margin: 0 50px 0 50px;
+}
+
+
+.container1{
+    display: flex;
+    gap: 20px;
 }

@@ -8,7 +8,6 @@ header {
     background-color: black;
     border-radius: 0 0 30px 30px;
     height: 100px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +24,6 @@ header div {
 header img {
     width: 100px;
     height: 50px;
-    background-color: aqua;
 }
 
 header button{
@@ -39,10 +37,267 @@ header button{
 
 .main{
     margin: 0 50px 0 50px;
+    display: block;
 }
 
-
-.container1{
+.container{
+    margin-top: 50px;
     display: flex;
     gap: 20px;
 }
+
+.container div{
+    max-width: 50%;
+}
+
+.container .img{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+#text-chat p{
+    font-size: 20px;
+    margin-top: 70px;
+    max-width: 50%;
+}
+
+.container2{
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.container2 .title{
+    display: flex;
+    justify-content: center;
+}
+
+.container2 .imgs{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 80px 0 80px;
+}
+
+.perfil{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.img-desc, .perfil .title{
+    text-align: center;
+}
+
+.imgs .div1{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 80px 0 80px;
+}
+
+
+.imgs .div2{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 100px 0 100px;
+}
+
+footer{
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doacoes{
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-copia-pix{
+    margin: auto;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.btn-copia-pix p{
+    margin-right: 15px;
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    header div {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    header img {
+        width: 120px;
+        height: auto;
+    }
+
+    header button {
+        font-size: 8px;
+        width: 150px;
+    }
+
+    .main {
+        margin: 0 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container div,
+    .container .img,
+    #text-chat p {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .container img {
+        width: 70%;
+    }
+
+    #text-chat ul {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .container2 .imgs {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px;
+    }
+
+    .perfil .imgs {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .perfil .div1,
+    .perfil .div2 {
+        flex-direction: column;
+        margin: 0;
+        gap: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    footer img {
+        width: 150px;
+    }
+
+    .btn-copia-pix {
+        flex-direction: row;
+        justify-content: center;
+        padding: 12px 18px;
+        width: fit-content;
+    }
+
+    .btn-copia-pix p {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    header {
+        padding: 15px 0;
+        height: auto;
+    }
+
+    header div {
+        width: 95%;
+    }
+
+    .main {
+        margin: 0 30px;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .container img {
+        width: 80%;
+    }
+
+    .container2 .imgs {
+        margin: 30px;
+        gap: 40px;
+    }
+
+    /* Perfil */
+    .perfil .imgs {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .perfil .div1,
+    .perfil .div2 {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    footer img {
+        width: 180px;
+    }
+
+    /* Botão PIX */
+    .btn-copia-pix {
+        padding: 15px 20px;
+    }
+}
+
+/* Aplica só a essa seção no celular: texto em cima, imagem embaixo */
+@media (max-width: 600px) {
+  .swap-mobile {
+    display: flex;              /* garante que é flex */
+    flex-direction: column-reverse; /* inverte a ordem: o que vinha 2º sobe e o que vinha 1º desce */
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* garante que cada bloco ocupe 100% e fique centralizado */
+  .swap-mobile .img,
+  .swap-mobile .text,
+  .swap-mobile .Text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .swap-mobile img {
+    width: 70%;   /* ajusta tamanho da imagem no celular */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* se você usa #text-chat com padding/margens, ajuste conforme necessário */
+  .swap-mobile #text-chat p {
+    margin-top: 20px; /* opcional */
+  }
+}
+

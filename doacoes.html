@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doações</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Nos ajude com a formatura</h1>
+    <header>
+        <div>
+            <img src="./Assets/logo.svg" alt="Logo TRS">
+            <a href="index.html"><button >Voltar</button></a>
+        </div>
+    </header>
+    <div class="main doacoes">
+        <h1>Nos ajude a pagar nossa festa de formatura!</h1>
+        <p>Olá! Somos a turma do Terceira Tech de 2025, e gostaríamos da sua ajuda para conseguir pagar nossa festa de formatura! Desde o ínicio do ano estamos arrecadando dinheiro com venda de doces, rifas, sorteios e nessa etapa final contamos com sua ajuda para atinjir nossa meta!</p>
+        <h5>Lembre se QUALQUEL VALOR AJUDA!</h5>
+        <p>Escaneie o QR Code ou copie o pix para contribuir</p>
+        <img src="./Assets//qrCodePix.jpeg" alt="QR Code do Pix" width="300px">
+        <button class="btn-copia-pix" id="copiarPix">
+            <p>Copie a chave PIX</p>
+            <img src="./Assets/copiaIcon.svg" alt="">
+        </button>
+    </div>
+
+    <script>
+        document.getElementById("copiarPix").addEventListener("click", () => {
+        const chavePix = "comissaoformaturatech@gmail.com";
+
+        navigator.clipboard.writeText(chavePix)
+            .then(() => {
+                alert("Chave PIX copiada!");
+            })
+            .catch(() => {
+                alert("Erro ao copiar a chave.");
+            });
+    });
+        </script>
 </body>
 </html>
